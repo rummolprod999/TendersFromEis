@@ -1,0 +1,8 @@
+{
+  "email_from": "example@mail.ru",
+  "smpt_server": "",
+  "smtp_port": 480,
+  "pass_email": "12345",
+  "email_to": "example@mail.ru",
+  "search_string": ""
+}
