@@ -1,45 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f57b4a4-4416-4653-9eb1-16e4da256a69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/$CACHE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/dictionaries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/vagrant.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/BuilderApp/Builder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/Executor/Executor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/Logger/Log.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/NetworkLibrary/DownloadString.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/NetworkLibrary/TimedWebClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/Parser/IParser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/TendersFromEis.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/bin/Debug/netcoreapp3.1/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/obj/Debug/netcoreapp3.1/TendersFromEis.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/obj/Debug/netcoreapp3.1/TendersFromEis.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/obj/Debug/netcoreapp3.1/TendersFromEis.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/obj/Debug/netcoreapp3.1/TendersFromEis.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/obj/TendersFromEis.csproj.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/obj/TendersFromEis.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/obj/TendersFromEis.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/obj/TendersFromEis.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TendersFromEis/obj/project.packagespec.json" afterDir="false" />
+    <list default="true" id="6f57b4a4-4416-4653-9eb1-16e4da256a69" name="Default Changelist" comment="add skeleton">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TendersFromEis/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,9 +33,9 @@
         <option value="$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Logger/Log.cs" />
+        <option value="$PROJECT_DIR$/TendersFromEis/Executor/Executor.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/BuilderApp/Builder.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Program.cs" />
-        <option value="$PROJECT_DIR$/TendersFromEis/Executor/Executor.cs" />
       </list>
     </option>
   </component>
@@ -145,8 +109,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579694939989</updated>
-      <workItem from="1579694997961" duration="2820000" />
+      <workItem from="1579694997961" duration="3737000" />
     </task>
+    <task id="LOCAL-00001" summary="add skeleton">
+      <created>1579698083595</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579698083595</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +137,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add skeleton" />
+    <option name="LAST_COMMIT_MESSAGE" value="add skeleton" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="2312" y="424" key="Github.ShareDialog" timestamp="1579697829771">
       <screen x="1600" y="0" width="1680" height="1050" />
@@ -174,22 +150,22 @@
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
     <state x="2226" y="252" key="Github.UntrackedFilesDialog/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579697839741" />
-    <state width="1638" height="258" key="GridCell.Tab.0.bottom" timestamp="1579698024841">
+    <state width="1636" height="258" key="GridCell.Tab.0.bottom" timestamp="1579698153162">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="258" key="GridCell.Tab.0.bottom/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579698024841" />
-    <state width="1638" height="258" key="GridCell.Tab.0.center" timestamp="1579698024840">
+    <state width="1636" height="258" key="GridCell.Tab.0.bottom/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579698153162" />
+    <state width="1636" height="258" key="GridCell.Tab.0.center" timestamp="1579698153162">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="258" key="GridCell.Tab.0.center/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579698024840" />
-    <state width="1638" height="258" key="GridCell.Tab.0.left" timestamp="1579698024833">
+    <state width="1636" height="258" key="GridCell.Tab.0.center/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579698153162" />
+    <state width="1636" height="258" key="GridCell.Tab.0.left" timestamp="1579698153162">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="258" key="GridCell.Tab.0.left/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579698024833" />
-    <state width="1638" height="258" key="GridCell.Tab.0.right" timestamp="1579698024841">
+    <state width="1636" height="258" key="GridCell.Tab.0.left/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579698153162" />
+    <state width="1636" height="258" key="GridCell.Tab.0.right" timestamp="1579698153162">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="258" key="GridCell.Tab.0.right/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579698024841" />
+    <state width="1636" height="258" key="GridCell.Tab.0.right/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579698153162" />
     <state width="1638" height="322" key="GridCell.Tab.1.bottom" timestamp="1579698021068">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
@@ -242,5 +218,9 @@
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
     <state x="2157" y="219" key="RiderGenerateDialog/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579696003997" />
+    <state x="2040" y="256" key="Vcs.Push.Dialog.v2" timestamp="1579698086925">
+      <screen x="1600" y="0" width="1680" height="1050" />
+    </state>
+    <state x="2040" y="256" key="Vcs.Push.Dialog.v2/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579698086925" />
   </component>
 </project>
