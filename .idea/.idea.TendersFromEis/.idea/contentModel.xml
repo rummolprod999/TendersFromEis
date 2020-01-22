@@ -9,6 +9,25 @@
     <e p="$USER_HOME$/.Rider2019.3/system/rust_expanded_macros/DWTwfJee/expansions" t="IncludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="TendersFromEis" t="IncludeRecursive">
+        <e p="BuilderApp" t="Include">
+          <e p="Builder.cs" t="Include" />
+        </e>
+        <e p="Executor" t="Include">
+          <e p="Executor.cs" t="Include" />
+        </e>
+        <e p="Extensions" t="Include" />
+        <e p="Logger" t="Include">
+          <e p="Log.cs" t="Include" />
+        </e>
+        <e p="NetworkLibrary" t="Include">
+          <e p="DownloadString.cs" t="Include" />
+          <e p="TimedWebClient.cs" t="Include" />
+        </e>
+        <e p="Parser" t="Include">
+          <e p="IParser.cs" t="Include" />
+          <e p="ParserAbstract.cs" t="Include" />
+          <e p="ParserWeb44.cs" t="Include" />
+        </e>
         <e p="Program.cs" t="Include" />
         <e p="TendersFromEis.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />

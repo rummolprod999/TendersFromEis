@@ -1,8 +1,8 @@
 {
   "email_from": "example@mail.ru",
-  "smpt_server": "",
+  "smtp_server": "example@mail.ru",
   "smtp_port": 480,
-  "pass_email": "12345",
+  "smtp_pass": "12345",
   "email_to": "example@mail.ru",
-  "search_string": ""
+  "search_string": "sfsdfsdz"
 }

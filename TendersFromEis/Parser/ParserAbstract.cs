@@ -1,6 +1,6 @@
 namespace TendersFromEis.Parser
 {
-    public class ParserAbstract
+    public abstract class ParserAbstract
     {
         
     }
