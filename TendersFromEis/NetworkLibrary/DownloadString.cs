@@ -9,6 +9,11 @@ namespace TendersFromEis.NetworkLibrary
 {
     public static class DownloadString
     {
+        public static int MaxDownload;
+        static DownloadString()
+        {
+            MaxDownload = 0;
+        }
         public static string DownLUserAgent(string url)
         {
             var tmp = "";
