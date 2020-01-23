@@ -29,6 +29,7 @@ namespace TendersFromEis.Parser
             CreateTenderFromDocList();
             DeleteOldExcel(_pathExcelFile);
             ExcelWriter(_pathExcelFile);
+            SendEmail(_pathExcelFile);
         }
 
         private void CreateTenderFromDocList()

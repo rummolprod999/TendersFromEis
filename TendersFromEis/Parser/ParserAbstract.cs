@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using HtmlAgilityPack;
+using MailKit.Net.Smtp;
+using MimeKit;
 using OfficeOpenXml;
+using TendersFromEis.BuilderApp;
 using TendersFromEis.Logger;
 using TendersFromEis.NetworkLibrary;
 
@@ -80,6 +83,27 @@ namespace TendersFromEis.Parser
                 row++;
             });
             excelPackage.SaveAs(new FileInfo(pathFile));
+        }
+
+        protected void SendEmail(string pathFile)
+        {
+            if (!new FileInfo(pathFile).Exists)
+            {
+                Log.Logger("the excel file not found, return without send email");
+                return;
+            }
+            var emailMessage = new MimeMessage();
+            emailMessage.From.Add(new MailboxAddress("Enter Test", Builder.EmailFrom));
+            emailMessage.To.Add(new MailboxAddress("", Builder.EmailTo));
+            emailMessage.Subject = "Subject";
+            emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html){
+                Text = "message"
+            };
+            var client = new SmtpClient();
+            client.Connect(Builder.SmtpServer, Builder.SmtpPort, true);
+            client.Authenticate(Builder.EmailFrom, Builder.SmtpPass);
+            client.Send(emailMessage);
+            client.Disconnect(true);
         }
 
         protected void DeleteOldExcel(string pathFile)
