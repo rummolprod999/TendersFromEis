@@ -1,3 +1,4 @@
+using System;
 using Newtonsoft.Json.Linq;
 
 namespace TendersFromEis.Tender
@@ -11,7 +12,11 @@ namespace TendersFromEis.Tender
 
         public void ParsingTender()
         {
-            throw new System.NotImplementedException();
+            var tender = new Tender();
+            tender.PurchaseNumber = ((string) J.SelectToken("purchaseNumber") ?? "").Trim();
+            tender.DocPublishDate = ((string) J.SelectToken("docPublishDate") ?? "").Trim();
+            tender.Href = ((string) J.SelectToken("href") ?? "").Trim();
+            Console.WriteLine(tender.DocPublishDate);
         }
     }
 }

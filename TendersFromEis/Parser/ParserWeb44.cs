@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -23,6 +24,7 @@ namespace TendersFromEis.Parser
         {
             Initialize();
             CreateListUrls();
+            CreateTenderFromDocList();
         }
 
         private void CreateTenderFromDocList()
@@ -45,8 +47,9 @@ namespace TendersFromEis.Parser
             var doc = new XmlDocument();
             doc.LoadXml(s);
             var jsons = JsonConvert.SerializeXmlNode(doc);
-            var json = JObject.Parse(jsons);
-            var firstOrDefault = json.Properties().FirstOrDefault(p => p.Name.Contains("fcs"));
+            using var jr = new JsonTextReader(new StringReader(jsons)) {DateParseHandling = DateParseHandling.None};
+            var json = JToken.ReadFrom(jr);
+            var firstOrDefault = json.Children().OfType<JProperty>().FirstOrDefault(p => p.Name.Contains("fcs"));
             if (firstOrDefault != null)
             {
                 var tender = firstOrDefault.Value;
@@ -55,7 +58,7 @@ namespace TendersFromEis.Parser
             }
             else
             {
-                firstOrDefault = json.Properties().FirstOrDefault(p => p.Name.Contains("epN"));
+                firstOrDefault = json.Children().OfType<JProperty>().FirstOrDefault(p => p.Name.Contains("epN"));
                 if (firstOrDefault != null)
                 {
                     

@@ -34,6 +34,7 @@
         <e p="Program.cs" t="Include" />
         <e p="Tender" t="Include">
           <e p="ITender.cs" t="Include" />
+          <e p="Tender.cs" t="Include" />
           <e p="TenderAbstract.cs" t="Include" />
           <e p="TenderType44.cs" t="Include" />
         </e>
