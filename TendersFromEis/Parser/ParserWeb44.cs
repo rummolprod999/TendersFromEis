@@ -6,6 +6,7 @@ using System.Xml;
 using HtmlAgilityPack;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using TendersFromEis.BuilderApp;
 using TendersFromEis.Extensions;
 using TendersFromEis.NetworkLibrary;
 using TendersFromEis.Tender;
@@ -16,6 +17,7 @@ namespace TendersFromEis.Parser
     public class ParserWeb44 : ParserAbstract, IParser
 
     {
+        private readonly string _pathExcelFile = $"{Builder.Path}{Path.DirectorySeparatorChar}tenders_fz_44.xlsx";
         public ParserWeb44() : base()
         {
         }
@@ -25,6 +27,8 @@ namespace TendersFromEis.Parser
             Initialize();
             CreateListUrls();
             CreateTenderFromDocList();
+            DeleteOldExcel(_pathExcelFile);
+            ExcelWriter(_pathExcelFile);
         }
 
         private void CreateTenderFromDocList()

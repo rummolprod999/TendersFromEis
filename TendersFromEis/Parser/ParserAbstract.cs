@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text.RegularExpressions;
 using HtmlAgilityPack;
+using OfficeOpenXml;
 using TendersFromEis.Logger;
 using TendersFromEis.NetworkLibrary;
 
@@ -9,10 +11,11 @@ namespace TendersFromEis.Parser
 {
     public abstract class ParserAbstract
     {
-        protected int PageCount;
+        protected int PageCount = 1; //TODO change it
         protected string CurrentUrl;
         protected int MaxDown = 1000;
         protected readonly HashSet<string> SetUrls = new HashSet<string>();
+        public static List<Tender.Tender> ListTenders = new List<Tender.Tender>();
 
         protected ParserAbstract()
         {
@@ -26,6 +29,7 @@ namespace TendersFromEis.Parser
                 var regex = new Regex(@"recordsPerPage=(_)?\d{1,3}");
                 return regex.Replace(s, "recordsPerPage=50");
             }
+
             return $"{s}&recordsPerPage=50";
         }
 
@@ -38,13 +42,16 @@ namespace TendersFromEis.Parser
                 Log.Logger("cannot get first page from EIS", CurrentUrl);
                 throw new Exception("cannot get first page from EIS");
             }
+
             var htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(s);
-            var maxPageS = htmlDoc.DocumentNode.SelectSingleNode("//ul[@class = 'pages']/li[last()]/a/span")?.InnerText ?? "1";
+            var maxPageS =
+                htmlDoc.DocumentNode.SelectSingleNode("//ul[@class = 'pages']/li[last()]/a/span")?.InnerText ?? "1";
             if (int.TryParse(maxPageS, out var maxP))
             {
                 return maxP;
             }
+
             return 1;
         }
 
@@ -55,10 +62,39 @@ namespace TendersFromEis.Parser
             return regex.Replace(url, $"pageNumber={page}");
         }
 
+        protected void ExcelWriter(string pathFile)
+        {
+            using var excelPackage = new ExcelPackage();
+            var worksheet = excelPackage.Workbook.Worksheets.Add("Sheet 1");
+            worksheet.Cells["A1"].Value = "Номер закупки";
+            worksheet.Cells["B1"].Value = "Дата публикации";
+            worksheet.Cells["C1"].Value = "Дата окончания подачи заявок";
+            worksheet.Cells["D1"].Value = "Ссылка";
+            var row = 2;
+            ListTenders.ForEach(t =>
+            {
+                worksheet.Cells[row, 1].Value = t.PurchaseNumber;
+                worksheet.Cells[row, 2].Value = t.DocPublishDate;
+                worksheet.Cells[row, 3].Value = t.EndDate;
+                worksheet.Cells[row, 4].Value = t.Href;
+                row++;
+            });
+            excelPackage.SaveAs(new FileInfo(pathFile));
+        }
+
+        protected void DeleteOldExcel(string pathFile)
+        {
+            var fInfo = new FileInfo(pathFile);
+            if (fInfo.Exists)
+            {
+                fInfo.Delete();
+            }
+        }
+
         protected void Initialize()
         {
             CurrentUrl = ChangeRecPerPage(CurrentUrl);
-            PageCount = MaxPage();
+            // PageCount = MaxPage(); //TODO change it
         }
     }
 }

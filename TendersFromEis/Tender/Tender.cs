@@ -22,6 +22,12 @@ namespace TendersFromEis.Tender
         public string OrganizerContact { get; set; }
         public string PlacingWayCode { get; set; }
         public string PlacingWayName { get; set; }
+        public string EtpCode { get; set; }
+        public string EtpName { get; set; }
+        public string EtpUrl { get; set; }
+        public string EndDate { get; set; }
+        public string ScoringDate { get; set; }
+        public string BiddingDate { get; set; }
         public Tender()
         {
             

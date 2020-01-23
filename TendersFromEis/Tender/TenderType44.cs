@@ -1,9 +1,10 @@
 using System;
 using Newtonsoft.Json.Linq;
+using TendersFromEis.Parser;
 
 namespace TendersFromEis.Tender
 {
-    public class TenderType44: TenderAbstract, ITender
+    public class TenderType44 : TenderAbstract, ITender
 
     {
         public TenderType44(JToken j, string url) : base(j, url)
@@ -22,15 +23,22 @@ namespace TendersFromEis.Tender
             tender.PrintForm = printForm;
             tender.PurchaseObjectInfo = ((string) J.SelectToken("purchaseObjectInfo") ?? "").Trim();
             tender.OrganizerRegNum = ((string) J.SelectToken("purchaseResponsible.responsibleOrg.regNum") ?? "").Trim();
-            tender.OrganizerFullName = ((string) J.SelectToken("purchaseResponsible.responsibleOrg.fullName") ?? "").Trim();
-            tender.OrganizerPostAddress = ((string) J.SelectToken("purchaseResponsible.responsibleOrg.postAddress") ?? "").Trim();
-            tender.OrganizerFactAddress = ((string) J.SelectToken("purchaseResponsible.responsibleOrg.factAddress") ?? "").Trim();
+            tender.OrganizerFullName =
+                ((string) J.SelectToken("purchaseResponsible.responsibleOrg.fullName") ?? "").Trim();
+            tender.OrganizerPostAddress =
+                ((string) J.SelectToken("purchaseResponsible.responsibleOrg.postAddress") ?? "").Trim();
+            tender.OrganizerFactAddress =
+                ((string) J.SelectToken("purchaseResponsible.responsibleOrg.factAddress") ?? "").Trim();
             tender.OrganizerInn = ((string) J.SelectToken("purchaseResponsible.responsibleOrg.INN") ?? "").Trim();
             tender.OrganizerKpp = ((string) J.SelectToken("purchaseResponsible.responsibleOrg.KPP") ?? "").Trim();
-            tender.OrganizerResponsibleRole = ((string) J.SelectToken("purchaseResponsible.responsibleRole") ?? "").Trim();
-            tender.OrganizerEmail = ((string) J.SelectToken("purchaseResponsible.responsibleInfo.contactEMail") ?? "").Trim();
-            tender.OrganizerFax = ((string) J.SelectToken("purchaseResponsible.responsibleInfo.contactFax") ?? "").Trim();
-            tender.OrganizerPhone = ((string) J.SelectToken("purchaseResponsible.responsibleInfo.contactPhone") ?? "").Trim();
+            tender.OrganizerResponsibleRole =
+                ((string) J.SelectToken("purchaseResponsible.responsibleRole") ?? "").Trim();
+            tender.OrganizerEmail =
+                ((string) J.SelectToken("purchaseResponsible.responsibleInfo.contactEMail") ?? "").Trim();
+            tender.OrganizerFax =
+                ((string) J.SelectToken("purchaseResponsible.responsibleInfo.contactFax") ?? "").Trim();
+            tender.OrganizerPhone =
+                ((string) J.SelectToken("purchaseResponsible.responsibleInfo.contactPhone") ?? "").Trim();
             var organizerLastName =
                 ((string) J.SelectToken("purchaseResponsible.responsibleInfo.contactPerson.lastName") ??
                  "").Trim();
@@ -44,7 +52,15 @@ namespace TendersFromEis.Tender
                 .Trim();
             tender.PlacingWayCode = ((string) J.SelectToken("placingWay.code") ?? "").Trim();
             tender.PlacingWayName = ((string) J.SelectToken("placingWay.name") ?? "").Trim();
-            Console.WriteLine(tender.DocPublishDate);
+            tender.EtpCode = ((string) J.SelectToken("ETP.code") ?? "").Trim();
+            tender.EtpName = ((string) J.SelectToken("ETP.name") ?? "").Trim();
+            tender.EtpUrl = ((string) J.SelectToken("ETP.url") ?? "").Trim();
+            tender.EndDate =
+                (((string) J.SelectToken("procedureInfo.collecting.endDate") ??
+                  (string) J.SelectToken("procedureInfo.collectingEndDate")) ?? "").Trim();
+            tender.ScoringDate = ((string) J.SelectToken("procedureInfo.scoring.date") ?? "").Trim();
+            tender.BiddingDate = ((string) J.SelectToken("procedureInfo.bidding.date") ?? "").Trim();
+            ParserAbstract.ListTenders.Add(tender);
         }
     }
 }

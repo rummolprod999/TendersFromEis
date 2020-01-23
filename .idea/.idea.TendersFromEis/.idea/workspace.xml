@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f57b4a4-4416-4653-9eb1-16e4da256a69" name="Default Changelist" comment="add changes">
+    <list default="true" id="6f57b4a4-4416-4653-9eb1-16e4da256a69" name="Default Changelist" comment="fix naming">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TendersFromEis/Tender/Tender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/Tender/Tender.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TendersFromEis/Tender/TenderAbstract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/Tender/TenderAbstract.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TendersFromEis/Tender/TenderType44.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/Tender/TenderType44.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,11 +54,11 @@
         <option value="$PROJECT_DIR$/TendersFromEis/NetworkLibrary/DownloadString.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Extensions/StringExtension.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Tender/ITender.cs" />
-        <option value="$PROJECT_DIR$/TendersFromEis/Tender/TenderAbstract.cs" />
-        <option value="$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Tender/Tender.cs" />
-        <option value="$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" />
+        <option value="$PROJECT_DIR$/TendersFromEis/Tender/TenderAbstract.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Tender/TenderType44.cs" />
+        <option value="$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" />
+        <option value="$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" />
       </list>
     </option>
   </component>
@@ -132,7 +133,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579694939989</updated>
       <workItem from="1579694997961" duration="3798000" />
-      <workItem from="1579762710147" duration="15852000" />
+      <workItem from="1579762710147" duration="19034000" />
     </task>
     <task id="LOCAL-00001" summary="add skeleton">
       <created>1579698083595</created>
@@ -176,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579781393715</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix naming">
+      <created>1579782299983</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1579782299983</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +209,8 @@
     <MESSAGE value="add skeleton" />
     <MESSAGE value="add dependencies" />
     <MESSAGE value="add changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="add changes" />
+    <MESSAGE value="fix naming" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix naming" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2312" y="424" key="Github.ShareDialog" timestamp="1579697829771">
@@ -212,22 +221,22 @@
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
     <state x="2226" y="252" key="Github.UntrackedFilesDialog/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579697839741" />
-    <state width="819" height="257" key="GridCell.Tab.0.bottom" timestamp="1579781140535">
+    <state width="819" height="257" key="GridCell.Tab.0.bottom" timestamp="1579784973445">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="257" key="GridCell.Tab.0.bottom/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579781140535" />
-    <state width="819" height="257" key="GridCell.Tab.0.center" timestamp="1579781140535">
+    <state width="819" height="257" key="GridCell.Tab.0.bottom/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579784973445" />
+    <state width="819" height="257" key="GridCell.Tab.0.center" timestamp="1579784973445">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="257" key="GridCell.Tab.0.center/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579781140535" />
-    <state width="819" height="257" key="GridCell.Tab.0.left" timestamp="1579781140535">
+    <state width="819" height="257" key="GridCell.Tab.0.center/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579784973445" />
+    <state width="819" height="257" key="GridCell.Tab.0.left" timestamp="1579784973444">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="257" key="GridCell.Tab.0.left/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579781140535" />
-    <state width="819" height="257" key="GridCell.Tab.0.right" timestamp="1579781140535">
+    <state width="819" height="257" key="GridCell.Tab.0.left/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579784973444" />
+    <state width="819" height="257" key="GridCell.Tab.0.right" timestamp="1579784973445">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="257" key="GridCell.Tab.0.right/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579781140535" />
+    <state width="819" height="257" key="GridCell.Tab.0.right/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579784973445" />
     <state width="819" height="321" key="GridCell.Tab.1.bottom" timestamp="1579781136442">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
@@ -280,10 +289,10 @@
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
     <state x="2157" y="219" key="RiderGenerateDialog/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579776717644" />
-    <state x="2040" y="256" key="Vcs.Push.Dialog.v2" timestamp="1579781397509">
+    <state x="2040" y="256" key="Vcs.Push.Dialog.v2" timestamp="1579782302529">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state x="2040" y="256" key="Vcs.Push.Dialog.v2/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579781397509" />
+    <state x="2040" y="256" key="Vcs.Push.Dialog.v2/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579782302529" />
     <state width="840" height="527" key="XDebugger.FullValuePopup" timestamp="1579780615050">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
