@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using HtmlAgilityPack;
 using TendersFromEis.Logger;
@@ -11,6 +12,7 @@ namespace TendersFromEis.Parser
         protected int _pageCount;
         protected string _currentUrl;
         protected int _maxDown = 1000;
+        protected HashSet<string> setUrls = new HashSet<string>();
 
         protected ParserAbstract()
         {

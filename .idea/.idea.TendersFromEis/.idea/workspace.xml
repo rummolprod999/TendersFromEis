@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f57b4a4-4416-4653-9eb1-16e4da256a69" name="Default Changelist" comment="add dependencies">
+    <list default="true" id="6f57b4a4-4416-4653-9eb1-16e4da256a69" name="Default Changelist" comment="add changes">
+      <change afterPath="$PROJECT_DIR$/TendersFromEis/Extensions/StringExtension.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TendersFromEis/Tender/ITender.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TendersFromEis/Tender/TenderAbstract.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TendersFromEis/Tender/TenderType44.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TendersFromEis/NetworkLibrary/DownloadString.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/NetworkLibrary/DownloadString.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TendersFromEis/bin/Debug/netcoreapp3.1/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/bin/Debug/netcoreapp3.1/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TendersFromEis/TendersFromEis.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/TendersFromEis.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,18 +21,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8939514A-A991-4C87-8DED-B1A4F070CDE7/5f/dce5deb0/HtmlNode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TendersFromEis/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/BuilderApp/Builder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TendersFromEis/NetworkLibrary/DownloadString.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Extensions/StringExtension.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TendersFromEis/NetworkLibrary/TimedWebClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///C# Console" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///C# Console" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Tender/ITender.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TendersFromEis/Logger/Log.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TendersFromEis/Executor/Executor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Tender/TenderAbstract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TendersFromEis/Parser/IParser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Tender/TenderType44.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/BuilderApp/Builder.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -41,8 +49,12 @@
         <option value="$PROJECT_DIR$/TendersFromEis/Program.cs" />
         <option value="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/TendersFromEis/NetworkLibrary/DownloadString.cs" />
-        <option value="$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" />
+        <option value="$PROJECT_DIR$/TendersFromEis/Extensions/StringExtension.cs" />
+        <option value="$PROJECT_DIR$/TendersFromEis/Tender/ITender.cs" />
+        <option value="$PROJECT_DIR$/TendersFromEis/Tender/TenderAbstract.cs" />
+        <option value="$PROJECT_DIR$/TendersFromEis/Tender/TenderType44.cs" />
+        <option value="$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" />
       </list>
     </option>
   </component>
@@ -117,7 +129,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579694939989</updated>
       <workItem from="1579694997961" duration="3798000" />
-      <workItem from="1579762710147" duration="8520000" />
+      <workItem from="1579762710147" duration="11057000" />
     </task>
     <task id="LOCAL-00001" summary="add skeleton">
       <created>1579698083595</created>
@@ -140,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579763572817</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add changes">
+      <created>1579774846502</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579774846502</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +183,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add skeleton" />
     <MESSAGE value="add dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dependencies" />
+    <MESSAGE value="add changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add changes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2312" y="424" key="Github.ShareDialog" timestamp="1579697829771">
@@ -175,22 +195,22 @@
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
     <state x="2226" y="252" key="Github.UntrackedFilesDialog/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579697839741" />
-    <state width="819" height="257" key="GridCell.Tab.0.bottom" timestamp="1579774724893">
+    <state width="819" height="257" key="GridCell.Tab.0.bottom" timestamp="1579775303479">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="257" key="GridCell.Tab.0.bottom/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579774724893" />
-    <state width="819" height="257" key="GridCell.Tab.0.center" timestamp="1579774724893">
+    <state width="819" height="257" key="GridCell.Tab.0.bottom/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579775303479" />
+    <state width="819" height="257" key="GridCell.Tab.0.center" timestamp="1579775303478">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="257" key="GridCell.Tab.0.center/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579774724893" />
-    <state width="819" height="257" key="GridCell.Tab.0.left" timestamp="1579774724892">
+    <state width="819" height="257" key="GridCell.Tab.0.center/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579775303478" />
+    <state width="819" height="257" key="GridCell.Tab.0.left" timestamp="1579775303478">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="257" key="GridCell.Tab.0.left/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579774724892" />
-    <state width="819" height="257" key="GridCell.Tab.0.right" timestamp="1579774724893">
+    <state width="819" height="257" key="GridCell.Tab.0.left/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579775303478" />
+    <state width="819" height="257" key="GridCell.Tab.0.right" timestamp="1579775303479">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="257" key="GridCell.Tab.0.right/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579774724893" />
+    <state width="819" height="257" key="GridCell.Tab.0.right/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579775303479" />
     <state width="1638" height="322" key="GridCell.Tab.1.bottom" timestamp="1579699496329">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
@@ -239,14 +259,14 @@
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="322" key="GridCell.Tab.3.right/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579699496330" />
-    <state x="2157" y="219" key="RiderGenerateDialog" timestamp="1579770345090">
+    <state x="2157" y="219" key="RiderGenerateDialog" timestamp="1579776717644">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state x="2157" y="219" key="RiderGenerateDialog/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579770345090" />
-    <state x="2040" y="256" key="Vcs.Push.Dialog.v2" timestamp="1579763576703">
+    <state x="2157" y="219" key="RiderGenerateDialog/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579776717644" />
+    <state x="2040" y="256" key="Vcs.Push.Dialog.v2" timestamp="1579774848458">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state x="2040" y="256" key="Vcs.Push.Dialog.v2/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579763576703" />
+    <state x="2040" y="256" key="Vcs.Push.Dialog.v2/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579774848458" />
   </component>
   <component name="regexState">
     <option name="map">

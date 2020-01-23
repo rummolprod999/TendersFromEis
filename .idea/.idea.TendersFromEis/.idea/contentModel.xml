@@ -16,7 +16,9 @@
         <e p="Executor" t="Include">
           <e p="Executor.cs" t="Include" />
         </e>
-        <e p="Extensions" t="Include" />
+        <e p="Extensions" t="Include">
+          <e p="StringExtension.cs" t="Include" />
+        </e>
         <e p="Logger" t="Include">
           <e p="Log.cs" t="Include" />
         </e>
@@ -30,6 +32,11 @@
           <e p="ParserWeb44.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
+        <e p="Tender" t="Include">
+          <e p="ITender.cs" t="Include" />
+          <e p="TenderAbstract.cs" t="Include" />
+          <e p="TenderType44.cs" t="Include" />
+        </e>
         <e p="TendersFromEis.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
