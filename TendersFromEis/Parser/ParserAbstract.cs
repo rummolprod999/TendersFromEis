@@ -9,14 +9,14 @@ namespace TendersFromEis.Parser
 {
     public abstract class ParserAbstract
     {
-        protected int _pageCount;
-        protected string _currentUrl;
-        protected int _maxDown = 1000;
-        protected HashSet<string> setUrls = new HashSet<string>();
+        protected int PageCount;
+        protected string CurrentUrl;
+        protected int MaxDown = 1000;
+        protected readonly HashSet<string> SetUrls = new HashSet<string>();
 
         protected ParserAbstract()
         {
-            _currentUrl = Uri.EscapeUriString(BuilderApp.Builder.SearchString);
+            CurrentUrl = Uri.EscapeUriString(BuilderApp.Builder.SearchString);
         }
 
         protected string ChangeRecPerPage(string s)
@@ -32,10 +32,10 @@ namespace TendersFromEis.Parser
         protected int MaxPage()
         {
             if (DownloadString.MaxDownload >= 1000) return 1;
-            var s = DownloadString.DownLUserAgent(_currentUrl);
+            var s = DownloadString.DownLUserAgent(CurrentUrl);
             if (string.IsNullOrEmpty(s))
             {
-                Log.Logger("cannot get first page from EIS", _currentUrl);
+                Log.Logger("cannot get first page from EIS", CurrentUrl);
                 throw new Exception("cannot get first page from EIS");
             }
             var htmlDoc = new HtmlDocument();
@@ -57,8 +57,8 @@ namespace TendersFromEis.Parser
 
         protected void Initialize()
         {
-            _currentUrl = ChangeRecPerPage(_currentUrl);
-            _pageCount = MaxPage();
+            CurrentUrl = ChangeRecPerPage(CurrentUrl);
+            PageCount = MaxPage();
         }
     }
 }

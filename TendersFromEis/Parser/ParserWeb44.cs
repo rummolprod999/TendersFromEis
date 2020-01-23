@@ -29,7 +29,7 @@ namespace TendersFromEis.Parser
 
         private void CreateTenderFromDocList()
         {
-            foreach (var url in setUrls)
+            foreach (var url in SetUrls)
             {
                 CreateTenderFromDoc(url);
             }
@@ -86,7 +86,7 @@ namespace TendersFromEis.Parser
 
         private void CreateListUrls()
         {
-            for (var i = 1; i <= _pageCount; i++)
+            for (var i = 1; i <= PageCount; i++)
             {
                 try
                 {
@@ -101,7 +101,7 @@ namespace TendersFromEis.Parser
 
         private void ParsingPage(int i)
         {
-            var currUrl = CreateCurrentUrl(_currentUrl, i);
+            var currUrl = CreateCurrentUrl(CurrentUrl, i);
             if (DownloadString.MaxDownload >= 1000) return;
             var s = DownloadString.DownLUserAgent(currUrl);
             if (string.IsNullOrEmpty(s))
@@ -134,7 +134,7 @@ namespace TendersFromEis.Parser
             if (string.IsNullOrEmpty(url) || !url.Contains("epz/order")) return;
             url = url.Replace("view.html", "viewXml.html");
             url = $"http://zakupki.gov.ru{url}";
-            setUrls.Add(url);
+            SetUrls.Add(url);
         }
     }
 }
