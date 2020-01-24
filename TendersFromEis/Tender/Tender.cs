@@ -1,7 +1,14 @@
+using System.Collections.Generic;
+
 namespace TendersFromEis.Tender
 {
     public class Tender
     {
+        public Tender()
+        {
+            
+        }
+
         public string PurchaseNumber { get; set; }
         public string DocPublishDate { get; set; }
         public string Href { get; set; }
@@ -26,10 +33,32 @@ namespace TendersFromEis.Tender
         public string EndDate { get; set; }
         public string ScoringDate { get; set; }
         public string BiddingDate { get; set; }
-        public Tender()
+        public List<Lot> Lots { get; set; }
+        
+
+        public class Lot
         {
-            
+            public string LotMaxPrice { get; set; }
+            public string LotCurrency { get; set; }
+            public string LotFinanceSource { get; set; }
+            public string LotName { get; set; }
+            public List<PurchaseObject> PurchaseObjects { get; set; }
+            public class PurchaseObject
+            {
+                public string Code { get; set; }
+                public string Name { get; set; }
+                public string Price { get; set; }
+                public string Quantity { get; set; }
+                public string Sum { get; set; }
+                public string OkeiName { get; set; }
+                public List<KtruCharacteristic> KtruCharacteristics { get; set; }
+                public class KtruCharacteristic
+                {
+                    public string Name { get; set; }
+                }
+            }
         }
+
         
     }
 }

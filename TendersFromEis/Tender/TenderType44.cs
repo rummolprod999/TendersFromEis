@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Newtonsoft.Json.Linq;
 using TendersFromEis.Parser;
 
@@ -60,7 +62,54 @@ namespace TendersFromEis.Tender
                   (string) J.SelectToken("procedureInfo.collectingEndDate")) ?? "").Trim();
             tender.ScoringDate = ((string) J.SelectToken("procedureInfo.scoring.date") ?? "").Trim();
             tender.BiddingDate = ((string) J.SelectToken("procedureInfo.bidding.date") ?? "").Trim();
+            tender.Lots = CreateLots(J);
             ParserAbstract.ListTenders.Add(tender);
+        }
+
+        private List<Tender.Lot> CreateLots(JToken j)
+        {
+            var lotsList = new List<Tender.Lot>();
+            var lots = GetElements(j, "lot");
+            if (lots.Count == 0)
+                lots = GetElements(j, "lots.lot");
+            lots.ForEach(l =>
+            {
+                var lot = new Tender.Lot();
+                lot.LotMaxPrice = ((string) l.SelectToken("maxPrice") ?? "").Trim();
+                lot.LotCurrency = ((string) l.SelectToken("currency.name") ?? "").Trim();
+                lot.LotFinanceSource = ((string) l.SelectToken("financeSource") ?? "").Trim();
+                lot.LotName = ((string) l.SelectToken("lotObjectInfo") ?? "").Trim();
+                lot.PurchaseObjects = CreatePurchaseObjects(l);
+                lotsList.Add(lot);
+            });
+            return lotsList;
+        }
+
+        private List<Tender.Lot.PurchaseObject> CreatePurchaseObjects(JToken l)
+        {
+            var poList = new List<Tender.Lot.PurchaseObject>();
+            var purchaseObjects = GetElements(l, "purchaseObjects.purchaseObject");
+            purchaseObjects.ForEach(po =>
+            {
+                var purObj = new Tender.Lot.PurchaseObject();
+                purObj.Code = ((string) po.SelectToken("KTRU.code") ?? "").Trim();
+                purObj.Name = ((string) po.SelectToken("KTRU.name") ?? "").Trim();
+                purObj.Price = ((string) po.SelectToken("price") ?? "").Trim();
+                purObj.Quantity = ((string) po.SelectToken("quantity.value") ?? "").Trim();
+                purObj.Sum = ((string) po.SelectToken("sum") ?? "").Trim();
+                purObj.OkeiName = ((string) po.SelectToken("OKEI.fullName") ?? "").Trim();
+                purObj.KtruCharacteristics = CreateKtruCharacteristics(po);
+                poList.Add(purObj);
+            });
+            return poList;
+        }
+
+        private List<Tender.Lot.PurchaseObject.KtruCharacteristic> CreateKtruCharacteristics(JToken p)
+        {
+            var ctruCharacteristics = new List<Tender.Lot.PurchaseObject.KtruCharacteristic>();
+            var characteristics = GetElements(p, "KTRU.characteristics.characteristicsUsingReferenceInfo");
+            characteristics.ForEach(ch => { });
+            return ctruCharacteristics;
         }
     }
 }

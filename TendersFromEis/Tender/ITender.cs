@@ -1,3 +1,4 @@
+
 namespace TendersFromEis.Tender
 {
     public interface ITender
