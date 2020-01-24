@@ -25,10 +25,10 @@ namespace TendersFromEis.Parser
         public void Parsing()
         {
             Initialize();
-            CreateListUrls();
+            /*CreateListUrls();
             CreateTenderFromDocList();
             DeleteOldExcel(_pathExcelFile);
-            ExcelWriter(_pathExcelFile);
+            ExcelWriter(_pathExcelFile);*/
             SendEmail(_pathExcelFile);
         }
 

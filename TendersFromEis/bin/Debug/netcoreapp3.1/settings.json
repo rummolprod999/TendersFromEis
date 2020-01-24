@@ -1,8 +1,8 @@
 {
-  "email_from": "example@mail.ru",
-  "smtp_server": "example@mail.ru",
-  "smtp_port": 480,
-  "smtp_pass": "12345",
-  "email_to": "example@mail.ru",
+  "email_from": "aliaksandrtest@yandex.ru",
+  "smtp_server": "smtp.yandex.ru",
+  "smtp_port": 465,
+  "smtp_pass": "",
+  "email_to": "rummolprod999@gmail.com",
   "search_string": "https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=хлеб&morphology=on&search-filter=Дате+размещения&pageNumber=1&sortDirection=false&recordsPerPage=_10&showLotsInfoHidden=false&fz44=on&sortBy=UPDATE_DATE&af=on&priceFromGeneral=100000&priceToGeneral=3000000&currencyIdGeneral=-1"
 }

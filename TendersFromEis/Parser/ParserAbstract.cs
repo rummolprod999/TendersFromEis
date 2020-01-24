@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Security.Authentication;
 using System.Text.RegularExpressions;
 using HtmlAgilityPack;
 using MailKit.Net.Smtp;
@@ -93,11 +94,11 @@ namespace TendersFromEis.Parser
                 return;
             }
             var emailMessage = new MimeMessage();
-            emailMessage.From.Add(new MailboxAddress("Enter Test", Builder.EmailFrom));
+            emailMessage.From.Add(new MailboxAddress("Тестовый аккаунт", Builder.EmailFrom));
             emailMessage.To.Add(new MailboxAddress("", Builder.EmailTo));
-            emailMessage.Subject = "Subject";
+            emailMessage.Subject = "Новые тенедеры из поисковой выдачи по запросу";
             emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html){
-                Text = "message"
+                Text = "Файл во вложении"
             };
             var client = new SmtpClient();
             client.Connect(Builder.SmtpServer, Builder.SmtpPort, true);
