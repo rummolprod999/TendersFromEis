@@ -14,7 +14,7 @@ namespace TendersFromEis.Parser
 {
     public abstract class ParserAbstract
     {
-        protected int PageCount = 1; //TODO change it
+        protected int PageCount;
         protected string CurrentUrl;
         protected int MaxDown = 1000;
         protected readonly HashSet<string> SetUrls = new HashSet<string>();
@@ -96,22 +96,30 @@ namespace TendersFromEis.Parser
                         worksheet.Cells[row, 5].Value = l.LotMaxPrice;
                         worksheet.Cells[row, 6].Value = l.LotCurrency;
                         worksheet.Cells[row, 7].Value = l.LotName;
-                        worksheet.Cells[row, 8].Value = po.Code;
+                        worksheet.Cells[row, 8].Value = po.Code != "" ? po.Code : po.Okpd2Code;
                         var fullPoName = $"{po.Name}\n";
-                        po.KtruCharacteristics.ForEach(ch =>
+                        if (po.KtruCharacteristics.Count > 0)
                         {
-                            fullPoName += $"{ch.Name}: ";
-                            ch.CharacteristicValues.ForEach(v =>
+                            po.KtruCharacteristics.ForEach(ch =>
                             {
-                                fullPoName += $"{v.QualityDescription}";
-                                if (v.ValueRangeMinMathNotation != "" && v.ValueRangeMaxMathNotation != "")
+                                fullPoName += $"{ch.Name}: ";
+                                ch.CharacteristicValues.ForEach(v =>
                                 {
-                                    fullPoName +=
-                                        $"{v.ValueRangeMinMathNotation} {v.ValueRangeMin} и {v.ValueRangeMaxMathNotation} {v.ValueRangeMax}";
-                                }
+                                    fullPoName += $"{v.QualityDescription}";
+                                    if (v.ValueRangeMinMathNotation != "" && v.ValueRangeMaxMathNotation != "")
+                                    {
+                                        fullPoName +=
+                                            $"{v.ValueRangeMinMathNotation} {v.ValueRangeMin} и {v.ValueRangeMaxMathNotation} {v.ValueRangeMax}";
+                                    }
+                                });
+                                fullPoName += "\n";
                             });
-                            fullPoName += "\n";
-                        });
+                        }
+                        else
+                        {
+                            fullPoName += $"{po.Okpd2Name}\n{po.Okpd2AddCharacteristic}";
+                        }
+                        
                         worksheet.Cells[row, 9].Value = fullPoName;
                         worksheet.Cells[row, 10].Value = po.OkeiName;
                         worksheet.Cells[row, 11].Value = po.Quantity;
@@ -170,7 +178,7 @@ namespace TendersFromEis.Parser
         protected void Initialize()
         {
             CurrentUrl = ChangeRecPerPage(CurrentUrl);
-            // PageCount = MaxPage(); //TODO change it
+            PageCount = MaxPage();
         }
     }
 }

@@ -97,6 +97,9 @@ namespace TendersFromEis.Tender
                 purObj.Quantity = ((string) po.SelectToken("quantity.value") ?? "").Trim();
                 purObj.Sum = ((string) po.SelectToken("sum") ?? "").Trim();
                 purObj.OkeiName = ((string) po.SelectToken("OKEI.fullName") ?? "").Trim();
+                purObj.Okpd2Code = ((string) po.SelectToken("OKPD2.code") ?? "").Trim();
+                purObj.Okpd2Name = ((string) po.SelectToken("OKPD2.name") ?? "").Trim();
+                purObj.Okpd2AddCharacteristic = ((string) po.SelectToken("OKPD2.addCharacteristics") ?? "").Trim();
                 purObj.KtruCharacteristics = CreateKtruCharacteristics(po);
                 poList.Add(purObj);
             });

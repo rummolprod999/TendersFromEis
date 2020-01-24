@@ -46,6 +46,9 @@ namespace TendersFromEis.Tender
             public class PurchaseObject
             {
                 public string Code { get; set; }
+                public string Okpd2Code { get; set; }
+                public string Okpd2Name { get; set; }
+                public string Okpd2AddCharacteristic { get; set; }
                 public string Name { get; set; }
                 public string Price { get; set; }
                 public string Quantity { get; set; }

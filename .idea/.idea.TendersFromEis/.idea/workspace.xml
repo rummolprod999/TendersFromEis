@@ -5,6 +5,8 @@
       <changelist_data />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TendersFromEis/Tender/Tender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/Tender/Tender.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TendersFromEis/Tender/TenderType44.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/Tender/TenderType44.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +134,7 @@
       <updated>1579694939989</updated>
       <workItem from="1579694997961" duration="3798000" />
       <workItem from="1579762710147" duration="20939000" />
-      <workItem from="1579853414145" duration="11315000" />
+      <workItem from="1579853414145" duration="13366000" />
     </task>
     <task id="LOCAL-00001" summary="add skeleton">
       <created>1579698083595</created>
@@ -267,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579863168847</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add changes">
+      <created>1579864948765</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1579864948765</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,22 +317,22 @@
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
     <state x="2226" y="252" key="Github.UntrackedFilesDialog/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579697839741" />
-    <state width="819" height="257" key="GridCell.Tab.0.bottom" timestamp="1579858203874">
+    <state width="819" height="257" key="GridCell.Tab.0.bottom" timestamp="1579868218345">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="257" key="GridCell.Tab.0.bottom/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579858203874" />
-    <state width="819" height="257" key="GridCell.Tab.0.center" timestamp="1579858203874">
+    <state width="819" height="257" key="GridCell.Tab.0.bottom/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579868218345" />
+    <state width="819" height="257" key="GridCell.Tab.0.center" timestamp="1579868218345">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="257" key="GridCell.Tab.0.center/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579858203874" />
-    <state width="819" height="257" key="GridCell.Tab.0.left" timestamp="1579858203874">
+    <state width="819" height="257" key="GridCell.Tab.0.center/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579868218345" />
+    <state width="819" height="257" key="GridCell.Tab.0.left" timestamp="1579868218345">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="257" key="GridCell.Tab.0.left/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579858203874" />
-    <state width="819" height="257" key="GridCell.Tab.0.right" timestamp="1579858203874">
+    <state width="819" height="257" key="GridCell.Tab.0.left/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579868218345" />
+    <state width="819" height="257" key="GridCell.Tab.0.right" timestamp="1579868218345">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="257" key="GridCell.Tab.0.right/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579858203874" />
+    <state width="819" height="257" key="GridCell.Tab.0.right/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579868218345" />
     <state width="819" height="321" key="GridCell.Tab.1.bottom" timestamp="1579787146484">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
@@ -380,14 +389,18 @@
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
     <state x="2247" y="255" key="RollbackChangesDialog/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579787051047" />
-    <state x="2040" y="256" width="800" height="534" key="Vcs.Push.Dialog.v2" timestamp="1579863171017">
+    <state x="2040" y="256" width="800" height="534" key="Vcs.Push.Dialog.v2" timestamp="1579864950896">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state x="2040" y="256" width="800" height="534" key="Vcs.Push.Dialog.v2/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579863171017" />
+    <state x="2040" y="256" width="800" height="534" key="Vcs.Push.Dialog.v2/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579864950896" />
     <state width="840" height="527" key="XDebugger.FullValuePopup" timestamp="1579780615050">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
     <state width="840" height="527" key="XDebugger.FullValuePopup/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579780615050" />
+    <state x="1700" y="96" width="1480" height="854" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579868182609">
+      <screen x="1600" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1700" y="96" width="1480" height="854" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579868182609" />
   </component>
   <component name="regexState">
     <option name="map">
