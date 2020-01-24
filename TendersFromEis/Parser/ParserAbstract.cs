@@ -69,18 +69,57 @@ namespace TendersFromEis.Parser
         {
             using var excelPackage = new ExcelPackage();
             var worksheet = excelPackage.Workbook.Worksheets.Add("Sheet 1");
-            worksheet.Cells["A1"].Value = "Номер закупки";
-            worksheet.Cells["B1"].Value = "Дата публикации";
-            worksheet.Cells["C1"].Value = "Дата окончания подачи заявок";
-            worksheet.Cells["D1"].Value = "Ссылка";
+            worksheet.Cells[1, 1].Value = "Номер закупки";
+            worksheet.Cells[1, 2].Value = "Дата публикации";
+            worksheet.Cells[1, 3].Value = "Дата окончания подачи заявок";
+            worksheet.Cells[1, 4].Value = "Ссылка";
+            worksheet.Cells[1, 5].Value = "НМЦК";
+            worksheet.Cells[1, 6].Value = "Валюта";
+            worksheet.Cells[1, 7].Value = "Название лота";
+            worksheet.Cells[1, 8].Value = "КОД ПОЗИЦИИ";
+            worksheet.Cells[1, 9].Value = "НАИМЕНОВАНИЕ ТОВАРА, РАБОТЫ, УСЛУГИ";
+            worksheet.Cells[1, 10].Value = "ЕД. ИЗМЕРЕНИЯ";
+            worksheet.Cells[1, 11].Value = "КОЛИЧЕСТВО";
+            worksheet.Cells[1, 12].Value = "ЦЕНА ЗА ЕД.";
+            worksheet.Cells[1, 13].Value = "СТОИМОСТЬ";
             var row = 2;
             ListTenders.ForEach(t =>
             {
-                worksheet.Cells[row, 1].Value = t.PurchaseNumber;
-                worksheet.Cells[row, 2].Value = t.DocPublishDate;
-                worksheet.Cells[row, 3].Value = t.EndDate;
-                worksheet.Cells[row, 4].Value = t.Href;
-                row++;
+                t.Lots.ForEach(l =>
+                {
+                    l.PurchaseObjects.ForEach(po =>
+                    {
+                        worksheet.Cells[row, 1].Value = t.PurchaseNumber;
+                        worksheet.Cells[row, 2].Value = t.DocPublishDate;
+                        worksheet.Cells[row, 3].Value = t.EndDate;
+                        worksheet.Cells[row, 4].Value = t.Href;
+                        worksheet.Cells[row, 5].Value = l.LotMaxPrice;
+                        worksheet.Cells[row, 6].Value = l.LotCurrency;
+                        worksheet.Cells[row, 7].Value = l.LotName;
+                        worksheet.Cells[row, 8].Value = po.Code;
+                        var fullPoName = $"{po.Name}\n";
+                        po.KtruCharacteristics.ForEach(ch =>
+                        {
+                            fullPoName += $"{ch.Name}: ";
+                            ch.CharacteristicValues.ForEach(v =>
+                            {
+                                fullPoName += $"{v.QualityDescription}";
+                                if (v.ValueRangeMinMathNotation != "" && v.ValueRangeMaxMathNotation != "")
+                                {
+                                    fullPoName +=
+                                        $"{v.ValueRangeMinMathNotation} {v.ValueRangeMin} и {v.ValueRangeMaxMathNotation} {v.ValueRangeMax}";
+                                }
+                            });
+                            fullPoName += "\n";
+                        });
+                        worksheet.Cells[row, 9].Value = fullPoName;
+                        worksheet.Cells[row, 10].Value = po.OkeiName;
+                        worksheet.Cells[row, 11].Value = po.Quantity;
+                        worksheet.Cells[row, 12].Value = po.Price;
+                        worksheet.Cells[row, 13].Value = po.Sum;
+                        row++;
+                    });
+                });
             });
             excelPackage.SaveAs(new FileInfo(pathFile));
         }
@@ -92,21 +131,24 @@ namespace TendersFromEis.Parser
                 Log.Logger("the excel file not found, return without send email");
                 return;
             }
+
             var emailMessage = new MimeMessage();
             emailMessage.From.Add(new MailboxAddress("Тестовый аккаунт", Builder.EmailFrom));
             emailMessage.To.Add(new MailboxAddress("", Builder.EmailTo));
             emailMessage.Subject = "Новые тенедеры из поисковой выдачи по запросу";
-            var body = new TextPart(MimeKit.Text.TextFormat.Html){
+            var body = new TextPart(MimeKit.Text.TextFormat.Html)
+            {
                 Text = "Файл во вложении"
             };
-            var attachment = new MimePart ("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "xlsx") {
-                Content = new MimeContent (File.OpenRead (pathFile)),
-                ContentDisposition = new ContentDisposition (ContentDisposition.Attachment),
+            var attachment = new MimePart("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "xlsx")
+            {
+                Content = new MimeContent(File.OpenRead(pathFile)),
+                ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
                 ContentTransferEncoding = ContentEncoding.Base64,
-                FileName = Path.GetFileName (pathFile)
+                FileName = Path.GetFileName(pathFile)
             };
-            var multipart = new Multipart ("mixed");
-            multipart.Add (body);
+            var multipart = new Multipart("mixed");
+            multipart.Add(body);
             multipart.Add(attachment);
             emailMessage.Body = multipart;
             var client = new SmtpClient();
