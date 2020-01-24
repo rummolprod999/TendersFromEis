@@ -55,6 +55,15 @@ namespace TendersFromEis.Tender
                 public class KtruCharacteristic
                 {
                     public string Name { get; set; }
+                    public List<CharacteristicValue> CharacteristicValues { get; set; }
+                    public class CharacteristicValue
+                    {
+                        public string QualityDescription { get; set; }
+                        public string ValueRangeMinMathNotation { get; set; }
+                        public string ValueRangeMin { get; set; }
+                        public string ValueRangeMaxMathNotation { get; set; }
+                        public string ValueRangeMax { get; set; }
+                    }
                 }
             }
         }

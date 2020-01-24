@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Newtonsoft.Json.Linq;
 using TendersFromEis.Parser;
 
@@ -108,8 +107,34 @@ namespace TendersFromEis.Tender
         {
             var ctruCharacteristics = new List<Tender.Lot.PurchaseObject.KtruCharacteristic>();
             var characteristics = GetElements(p, "KTRU.characteristics.characteristicsUsingReferenceInfo");
-            characteristics.ForEach(ch => { });
+            characteristics.ForEach(ch =>
+            {
+                var charact = new Tender.Lot.PurchaseObject.KtruCharacteristic();
+                charact.Name = ((string) ch.SelectToken("name") ?? "").Trim();
+                charact.CharacteristicValues = CreateCharacteristicValues(ch);
+                ctruCharacteristics.Add(charact);
+            });
             return ctruCharacteristics;
+        }
+
+        private List<Tender.Lot.PurchaseObject.KtruCharacteristic.CharacteristicValue>
+            CreateCharacteristicValues(JToken ch)
+        {
+            var charValues = new List<Tender.Lot.PurchaseObject.KtruCharacteristic.CharacteristicValue>();
+            var values = GetElements(ch, "values.value");
+            values.ForEach(v =>
+            {
+                var value = new Tender.Lot.PurchaseObject.KtruCharacteristic.CharacteristicValue();
+                value.QualityDescription = ((string) v.SelectToken("qualityDescription") ?? "").Trim();
+                value.ValueRangeMinMathNotation =
+                    ((string) v.SelectToken("rangeSet.valueRange.minMathNotation") ?? "").Trim();
+                value.ValueRangeMin = ((string) v.SelectToken("rangeSet.valueRange.min") ?? "").Trim();
+                value.ValueRangeMaxMathNotation =
+                    ((string) v.SelectToken("rangeSet.valueRange.maxMathNotation") ?? "").Trim();
+                value.ValueRangeMax = ((string) v.SelectToken("rangeSet.valueRange.max") ?? "").Trim();
+                charValues.Add(value);
+            });
+            return charValues;
         }
     }
 }
