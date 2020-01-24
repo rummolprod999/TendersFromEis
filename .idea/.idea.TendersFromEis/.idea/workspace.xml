@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f57b4a4-4416-4653-9eb1-16e4da256a69" name="Default Changelist" comment="add changes">
+      <changelist_data />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TendersFromEis/bin/Debug/netcoreapp3.1/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/bin/Debug/netcoreapp3.1/settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +56,7 @@
         <option value="$PROJECT_DIR$/TendersFromEis/Executor/Executor.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -132,7 +132,7 @@
       <updated>1579694939989</updated>
       <workItem from="1579694997961" duration="3798000" />
       <workItem from="1579762710147" duration="20939000" />
-      <workItem from="1579853414145" duration="2173000" />
+      <workItem from="1579853414145" duration="2506000" />
     </task>
     <task id="LOCAL-00001" summary="add skeleton">
       <created>1579698083595</created>
@@ -197,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579787006361</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add changes">
+      <created>1579855709379</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1579855709379</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,22 +241,22 @@
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
     <state x="2226" y="252" key="Github.UntrackedFilesDialog/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579697839741" />
-    <state width="819" height="257" key="GridCell.Tab.0.bottom" timestamp="1579855462187">
+    <state width="819" height="257" key="GridCell.Tab.0.bottom" timestamp="1579855854757">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="257" key="GridCell.Tab.0.bottom/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579855462187" />
-    <state width="819" height="257" key="GridCell.Tab.0.center" timestamp="1579855462185">
+    <state width="819" height="257" key="GridCell.Tab.0.bottom/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579855854757" />
+    <state width="819" height="257" key="GridCell.Tab.0.center" timestamp="1579855854757">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="257" key="GridCell.Tab.0.center/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579855462185" />
-    <state width="819" height="257" key="GridCell.Tab.0.left" timestamp="1579855462184">
+    <state width="819" height="257" key="GridCell.Tab.0.center/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579855854757" />
+    <state width="819" height="257" key="GridCell.Tab.0.left" timestamp="1579855854757">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="257" key="GridCell.Tab.0.left/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579855462184" />
-    <state width="819" height="257" key="GridCell.Tab.0.right" timestamp="1579855462185">
+    <state width="819" height="257" key="GridCell.Tab.0.left/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579855854757" />
+    <state width="819" height="257" key="GridCell.Tab.0.right" timestamp="1579855854757">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state width="819" height="257" key="GridCell.Tab.0.right/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579855462185" />
+    <state width="819" height="257" key="GridCell.Tab.0.right/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579855854757" />
     <state width="819" height="321" key="GridCell.Tab.1.bottom" timestamp="1579787146484">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
@@ -306,10 +313,10 @@
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
     <state x="2247" y="255" key="RollbackChangesDialog/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579787051047" />
-    <state x="2040" y="256" key="Vcs.Push.Dialog.v2" timestamp="1579787009060">
+    <state x="2040" y="256" width="800" height="534" key="Vcs.Push.Dialog.v2" timestamp="1579855720086">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
-    <state x="2040" y="256" key="Vcs.Push.Dialog.v2/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579787009060" />
+    <state x="2040" y="256" width="800" height="534" key="Vcs.Push.Dialog.v2/0.24.1600.876/1600.0.1680.1050@1600.0.1680.1050" timestamp="1579855720086" />
     <state width="840" height="527" key="XDebugger.FullValuePopup" timestamp="1579780615050">
       <screen x="1600" y="0" width="1680" height="1050" />
     </state>
