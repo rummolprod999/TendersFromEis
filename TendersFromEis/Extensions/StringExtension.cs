@@ -1,5 +1,3 @@
-using System.Runtime.CompilerServices;
-
 namespace TendersFromEis.Extensions
 {
     public static class StringExtension

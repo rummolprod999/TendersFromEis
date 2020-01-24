@@ -1,5 +1,4 @@
-﻿using System;
-using TendersFromEis.BuilderApp;
+﻿using TendersFromEis.BuilderApp;
 using TendersFromEis.Parser;
 
 namespace TendersFromEis

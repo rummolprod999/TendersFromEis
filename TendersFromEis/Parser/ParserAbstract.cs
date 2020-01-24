@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Security.Authentication;
 using System.Text.RegularExpressions;
 using HtmlAgilityPack;
 using MailKit.Net.Smtp;
@@ -97,9 +96,19 @@ namespace TendersFromEis.Parser
             emailMessage.From.Add(new MailboxAddress("Тестовый аккаунт", Builder.EmailFrom));
             emailMessage.To.Add(new MailboxAddress("", Builder.EmailTo));
             emailMessage.Subject = "Новые тенедеры из поисковой выдачи по запросу";
-            emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html){
+            var body = new TextPart(MimeKit.Text.TextFormat.Html){
                 Text = "Файл во вложении"
             };
+            var attachment = new MimePart ("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "xlsx") {
+                Content = new MimeContent (File.OpenRead (pathFile)),
+                ContentDisposition = new ContentDisposition (ContentDisposition.Attachment),
+                ContentTransferEncoding = ContentEncoding.Base64,
+                FileName = Path.GetFileName (pathFile)
+            };
+            var multipart = new Multipart ("mixed");
+            multipart.Add (body);
+            multipart.Add(attachment);
+            emailMessage.Body = multipart;
             var client = new SmtpClient();
             client.Connect(Builder.SmtpServer, Builder.SmtpPort, true);
             client.Authenticate(Builder.EmailFrom, Builder.SmtpPass);
