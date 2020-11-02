@@ -17,7 +17,7 @@ namespace TendersFromEis.Parser
 
     {
         private readonly string _pathExcelFile = $"{Builder.Path}{Path.DirectorySeparatorChar}tenders_fz_44.xlsx";
-        public ParserWeb44() : base()
+        public ParserWeb44()
         {
         }
 

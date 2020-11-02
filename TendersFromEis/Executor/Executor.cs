@@ -22,7 +22,7 @@ namespace TendersFromEis.Executor
             }
             catch (Exception e)
             {
-                Logger.Log.Logger("Exception in parsing()", e);
+                Log.Logger("Exception in parsing()", e);
             }
             Log.Logger($"Add tenders to excel {ParserAbstract.ListTenders.Count}");
             Log.Logger("End");

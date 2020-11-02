@@ -20,7 +20,7 @@ namespace TendersFromEis.BuilderApp
         protected internal static int SmtpPort;
         private static Builder _b;
         public static readonly string Path = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName()
-            .CodeBase.Substring(5));
+            .CodeBase?.Substring(5));
         private Builder()
         {
             GetSettings();

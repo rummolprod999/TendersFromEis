@@ -22,7 +22,7 @@ namespace TendersFromEis.Parser
 
         protected ParserAbstract()
         {
-            CurrentUrl = Uri.EscapeUriString(BuilderApp.Builder.SearchString);
+            CurrentUrl = Uri.EscapeUriString(Builder.SearchString);
         }
 
         protected string ChangeRecPerPage(string s)
