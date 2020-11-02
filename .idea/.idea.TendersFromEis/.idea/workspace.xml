@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f57b4a4-4416-4653-9eb1-16e4da256a69" name="Default Changelist" comment="add changes">
-      <changelist_data name="" email="" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6f57b4a4-4416-4653-9eb1-16e4da256a69" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/TendersFromEis/obj/Debug/netcoreapp3.1/TendersFromEis.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TendersFromEis/obj/Debug/netcoreapp3.1/TendersFromEis.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,29 +12,32 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8939514A-A991-4C87-8DED-B1A4F070CDE7/5f/dce5deb0/HtmlNode.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/bin/Debug/netcoreapp3.1/settings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/Tender/Tender.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/NetworkLibrary/DownloadString.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/Extensions/StringExtension.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20735148-1523-4917-A5E8-F91B0B239405/15/JsonTextReader.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/NetworkLibrary/TimedWebClient.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/Tender/ITender.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/Logger/Log.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6402F371-6426-49C4-85F4-6784AB9D9468/53/81dcc961/MailService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/Executor/Executor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/Tender/TenderAbstract.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20735148-1523-4917-A5E8-F91B0B239405/80/JToken.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/Parser/IParser.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/Tender/TenderType44.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20735148-1523-4917-A5E8-F91B0B239405/0/IJsonLineInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20735148-1523-4917-A5E8-F91B0B239405/77/JObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TendersFromEis/BuilderApp/Builder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Parser/IParser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20735148-1523-4917-A5E8-F91B0B239405/80/JToken.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Logger/Log.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8939514A-A991-4C87-8DED-B1A4F070CDE7/5f/dce5deb0/HtmlNode.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20735148-1523-4917-A5E8-F91B0B239405/77/JObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Extensions/StringExtension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/bin/Debug/netcoreapp3.1/settings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20735148-1523-4917-A5E8-F91B0B239405/7D/JsonLoadSettings.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6402F371-6426-49C4-85F4-6784AB9D9468/53/81dcc961/MailService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/NetworkLibrary/TimedWebClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Executor/Executor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/NetworkLibrary/DownloadString.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Tender/ITender.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Tender/TenderType44.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20735148-1523-4917-A5E8-F91B0B239405/15/JsonTextReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Tender/TenderAbstract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Tender/Tender.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TendersFromEis/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20735148-1523-4917-A5E8-F91B0B239405/0/IJsonLineInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -43,27 +45,20 @@
         <option value="$PROJECT_DIR$/TendersFromEis/NetworkLibrary/TimedWebClient.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Parser/IParser.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Logger/Log.cs" />
-        <option value="$PROJECT_DIR$/TendersFromEis/BuilderApp/Builder.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Program.cs" />
         <option value="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/TendersFromEis/NetworkLibrary/DownloadString.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Extensions/StringExtension.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Executor/Executor.cs" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Tender/ITender.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Tender/TenderAbstract.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Tender/Tender.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Tender/TenderType44.cs" />
+        <option value="$PROJECT_DIR$/TendersFromEis/BuilderApp/Builder.cs" />
         <option value="$PROJECT_DIR$/TendersFromEis/Parser/ParserAbstract.cs" />
+        <option value="$PROJECT_DIR$/TendersFromEis/Parser/ParserWeb44.cs" />
       </list>
-    </option>
-  </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="$PROJECT_DIR$/.idea/.idea.TendersFromEis/.idea" />
-      </set>
     </option>
   </component>
   <component name="MacroExpansionManager">
@@ -74,14 +69,15 @@
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TWShift.4" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="TendersFromEis" type="DotNetProject" factoryName=".NET Project">
@@ -107,18 +103,7 @@
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
     <option name="version" value="2" />
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -133,6 +118,7 @@
       <workItem from="1579762710147" duration="20939000" />
       <workItem from="1579853414145" duration="13476000" />
       <workItem from="1580127994258" duration="595000" />
+      <workItem from="1604331077076" duration="294000" />
     </task>
     <task id="LOCAL-00001" summary="add skeleton">
       <created>1579698083595</created>
@@ -281,11 +267,18 @@
       <option name="project" value="LOCAL" />
       <updated>1579868731889</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="refactoring">
+      <created>1604331323101</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1604331323101</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
@@ -294,20 +287,21 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="add skeleton" />
     <MESSAGE value="add dependencies" />
     <MESSAGE value="fix naming" />
     <MESSAGE value="add changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="add changes" />
+    <MESSAGE value="refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1700" y="96" width="1480" height="854" key="DiffContextDialog" timestamp="1579856174221">
